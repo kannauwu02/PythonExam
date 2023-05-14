@@ -1,0 +1,61 @@
+Function tools (functools)
+- All features includes: cache, cached_property, cmp_to_key, lru_cache, total_ordering, partial, 
+partialmethod, reduce, singledispatch, singledispatchmethod, update_wrapper, wraps.
+
++ cache: A decorator that caches the return value of a function so that subsequent 
+calls with the same arguments can return the cached value instead of recomputing it.
+(là 1 decorator lưu trữ giá trị trả về của một hàm để các lần gọi sau đó với các đối số 
+giống nhau có thể trả về giá trị được lưu trữ trong bộ nhớ cache thay vì phải tính toán lại.)   
+
++ cached_property: A decorator that transforms a method of a class into a property 
+whose value is computed once and then cached as a normal attribute for the life of the instance.
+(là 1 decorator biến một phương thức của một class thành một thuộc tính có giá trị được tính toán một lần 
+và sau đó được lưu trữ như một thuộc tính bình thường cho suốt thời gian tồn tại của đối tượng.)
+
++ cmp_to_key (function(iterable, key=cmp_to_key(cmp_function))): A function that converts a comparison function 
+into a key function that can be used in sorting or ordering functions such as sorted(), min(), max(), etc.
+(là một hàm chuyển đổi một hàm so sánh thành một hàm khóa có thể được sử dụng trong các hàm sắp xếp hoặc 
+đặt thứ tự như sorted(), min(), max(), v.v.)
+
++ lru_cache (lru_cache(maxsize=128, typed=False)): A decorator that implements a least-recently-used cache for 
+a function, with a size limit and an option to make it thread-safe.
+(là 1 decorator thực hiện một bộ nhớ cache ít được sử dụng gần đây nhất cho một hàm, với một giới hạn kích thước 
+và một tùy chọn để làm cho nó an toàn cho luồng.)
+
++ total_ordering: A class decorator that fills in missing ordering methods for a class that defines 
+one or more ordering methods such as lt, le, gt, or ge.
+(là 1 decorator class điền vào các phương thức đặt thứ tự bị thiếu cho một class định nghĩa một hoặc nhiều 
+phương thức đặt thứ tự như lt, le, gt, hoặc ge.)
+
++ partial(func, /, *args, **keywords): A class that allows partial application of a function, i.e., fixing some 
+arguments and keywords and returning a new callable object with the remaining arguments and keywords.
+(là 1 class cho phép áp dụng một phần của một hàm, tức là cố định một số đối số và từ khóa và trả về một 
+đối tượng có thể gọi mới với các đối số và từ khóa còn lại.)
+
++ partialmethod(func, *args, **keywords): A class that allows partial application of a method, similar to 
+partial but works on methods instead of functions.
+(là 1 class cho phép áp dụng một phần của một phương thức, tương tự như partial nhưng hoạt động trên các 
+phương thức thay vì các hàm.)
+
++ reduce(function, sequence[, initial]): A function that applies a function of two arguments cumulatively 
+to the items of an iterable, from left to right, to reduce the iterable to a single value.
+(là 1 hàm áp dụng một hàm của hai đối số tích luỹ cho các phần tử của một iterable, từ trái sang phải, để 
+giảm iterable thành một giá trị duy nhất.)
+
++ singledispatch: A decorator that transforms a function into a single-dispatch generic function, i.e., 
+a function that can have different behaviors depending on the type of its first argument.
+(là 1 decorator biến một hàm thành một hàm tổng quát đơn phân phối, tức là một hàm có thể có các hành vi 
+khác nhau tùy thuộc vào loại của đối số đầu tiên của nó.)
+
++ singledispatchmethod: A descriptor class that transforms a method into a single-dispatch generic method, 
+similar to singledispatch but works on methods instead of functions.
+(là 1 class miêu tả biến một phương thức thành một phương thức tổng quát đơn phân phối, tương tự như 
+singledispatch nhưng hoạt động trên các phương thức thay vì các hàm.)
+
++ update_wrapper(wrapper, wrapped[, assigned][, updated]): A function that updates a wrapper function to look 
+like the wrapped function by copying or adding attributes such as name, doc, module, annotations, and qualname.
+(là 1 hàm cập nhật một hàm bọc để giống như hàm được bọc bằng cách sao chép hoặc thêm các thuộc tính như 
+name, doc, module, annotations và qualname.)
+
++ wraps: A decorator that applies update_wrapper to the decorated function.
+(là 1 decorator áp dụng update_wrapper cho hàm đã được decorate)
